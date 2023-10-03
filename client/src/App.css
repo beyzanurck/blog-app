@@ -57,3 +57,30 @@ body {
   width: 45%;
   height: 45%;
 }
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+
+.new-post textarea {
+  width: 50%;
+  margin: 2%;
+}
+
+.new-post input {
+  width: 30%;
+  margin: 2%;
+}
+
+.new-post button {
+  width: 10%;
+  margin-left: 42%;
+}
+
+.new-post p {
+  margin: 2%;
+  color: green;
+}
