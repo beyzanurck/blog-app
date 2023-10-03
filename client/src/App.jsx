@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Post from './Components/Post'
+import Input from './Components/Input';
 
 function App() {
 
   const [posts, setPosts] = useState([]);
+  const [search, setSearch] = useState(''); 
 
   async function getPosts() {
     try {
@@ -23,10 +25,13 @@ function App() {
     }
   }
 
-
   useEffect(() => {
     getPosts();
   }, []);
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value)
+  };
 
   return (
     <div className='home-app'>
@@ -39,11 +44,26 @@ function App() {
       </div>
 
       <div className='post-list'>
+
+        <Input
+          placeholder="Search..."
+          type='text'
+          value={search}
+          onChange={handleSearchChange}
+        />
+
         {
           posts.map((item, index) => (
-            <p key = {index}> {item.title} </p>
+            <p 
+              key={index} 
+              style={
+                { display: item.title.toLowerCase().includes(search.toLowerCase()) ? 'block' : 'none' }
+              }>
+              {item.title}
+            </p>
           ))
         }
+
       </div>
     </div>
   )
