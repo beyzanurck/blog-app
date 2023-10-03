@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div>
+    <header>
         <nav className='navbar'>
             <Link to="/" className='home'> Beyza's Blog </Link>
             <ul>
@@ -16,6 +16,6 @@ export default function Header() {
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
   )
 }

@@ -13,18 +13,6 @@ import About from './Components/About.jsx';
 import Layout from './Layout';
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element:  <App />,
-  // },
-  // {
-  //   path: "/new-post",
-  //   element: <NewPost />,
-  // },
-  // {
-  //   path: "/about",
-  //   element: <About />,
-  // }
   {
     path: "/",
     element: (
