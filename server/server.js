@@ -12,7 +12,7 @@ app.use(express.json()); //req.body
 app.get("/", async (req, res) =>  {
     
     try {
-        const {rows : allPosts} = await db.query('SELECT * FROM posts');
+        const {rows : allPosts} = await db.query('SELECT * FROM posts ORDER BY created_at DESC');
         res.send(allPosts);
         console.log(allPosts)
     } catch (error) {
