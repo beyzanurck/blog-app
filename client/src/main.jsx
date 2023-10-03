@@ -10,19 +10,44 @@ import App from './App.jsx'
 import './index.css'
 import NewPost from './Components/NewPost.jsx';
 import About from './Components/About.jsx';
+import Layout from './Layout';
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element:  <App />,
+  // },
+  // {
+  //   path: "/new-post",
+  //   element: <NewPost />,
+  // },
+  // {
+  //   path: "/about",
+  //   element: <About />,
+  // }
   {
     path: "/",
-    element:  <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
   },
   {
     path: "/new-post",
-    element: <NewPost />,
+    element: (
+      <Layout>
+        <NewPost />
+      </Layout>
+    ),
   },
   {
     path: "/about",
-    element: <About />,
+    element: (
+      <Layout>
+        <About />
+      </Layout>
+    ),
   }
 ]);
 
