@@ -71,4 +71,18 @@ app.put('/:id', async (req, res) => {
     }  
 });
 
+app.get('/:id', async (req, res) =>{
+
+    try{
+        const { id } = req.params;
+        const event = await db.query("SELECT * FROM posts WHERE id = $1",  [id]
+        );
+    
+        res.json(event.rows[0]);
+
+    } catch(error){
+        console.log(error);
+    }    
+})
+
 app.listen(PORT, () => console.log(`HELLOO! Server running on Port http://localhost:${PORT}`));
