@@ -1,11 +1,13 @@
 import React from 'react'
+import Title from './Title'
+import Content from './Content'
 
 export default function Post({posts}) {
 
   return (
     <div>
-      <p>{posts.title}</p>
-      <p>{posts.content}</p>
+      <Title title = {posts.title}/>
+      <Content content = {posts.content}/>
     </div>
   )
 }
