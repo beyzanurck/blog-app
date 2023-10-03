@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Post from './Components/Post'
 import Input from './Components/Input';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
 
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState(''); 
+  const navigate = useNavigate();
 
   async function getPosts() {
     try {
@@ -58,7 +60,9 @@ function App() {
               key={index} 
               style={
                 { display: item.title.toLowerCase().includes(search.toLowerCase()) ? 'block' : 'none' }
-              }>
+              }
+              onClick={() => {navigate(`/post/${item.id}`)}}
+              >
               {item.title}
             </p>
           ))

@@ -11,6 +11,7 @@ import './index.css'
 import NewPost from './Components/NewPost.jsx';
 import About from './Components/About.jsx';
 import Layout from './Layout';
+import ShowAPost from './Components/ShowAPost.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <About />
+      </Layout>
+    ),
+  }, 
+  {
+    path: "/post/:id",
+    element: (
+      <Layout>
+        <ShowAPost />
       </Layout>
     ),
   }
