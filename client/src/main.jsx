@@ -8,12 +8,22 @@ import {
 
 import App from './App.jsx'
 import './index.css'
+import NewPost from './Components/NewPost.jsx';
+import About from './Components/About.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:  <App />,
   },
+  {
+    path: "/new-post",
+    element: <NewPost />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
