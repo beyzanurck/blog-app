@@ -84,3 +84,18 @@ body {
   margin: 2%;
   color: green;
 }
+
+/* ------ */
+
+.home-app {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 3%;
+  margin-top: 5%;
+}
+
+.post-list {
+  margin-top: 10%;
+  width: 25%;
+}

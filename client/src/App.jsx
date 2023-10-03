@@ -29,12 +29,22 @@ function App() {
   }, []);
 
   return (
-    <div className='posts'>
+    <div className='home-app'>
+      <div className='posts'>
         {
           posts.map((item, index) => (
             <Post key={index} posts = {item}  />
           ))
         }
+      </div>
+
+      <div className='post-list'>
+        {
+          posts.map((item, index) => (
+            <p key = {index}> {item.title} </p>
+          ))
+        }
+      </div>
     </div>
   )
 }
