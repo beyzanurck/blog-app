@@ -99,3 +99,9 @@ body {
   margin-top: 10%;
   width: 25%;
 }
+
+.admin-button {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+}

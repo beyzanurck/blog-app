@@ -32,6 +32,10 @@ export default function ShowAPost() {
       <Img source = {post.img_url}/>
       <Title title = {post.title}/>
       <Content content = {post.content}/>
+      <div className='admin-button'>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
     </div>
   )
 }
