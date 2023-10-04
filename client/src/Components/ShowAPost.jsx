@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Img from './Img';
 import Title from './Title';
 import Content from './Content';
@@ -8,6 +8,7 @@ export default function ShowAPost() {
 
     const [post, setPost] = useState([]);
     let { id } = useParams();
+    const navigate = useNavigate(); 
 
     async function getPostById() {
         try {
@@ -27,6 +28,15 @@ export default function ShowAPost() {
         getPostById();
     }, []);
 
+    async function handleDelete(id) {
+
+        try {
+            const deletePost = await fetch(`http://localhost:1212/${id}`, {method: "DELETE"})
+        } catch (error) {
+            console.error(error.message)
+        }
+    }
+
   return (
     <div>
       <Img source = {post.img_url}/>
@@ -34,8 +44,10 @@ export default function ShowAPost() {
       <Content content = {post.content}/>
       <div className='admin-button'>
         <button>Edit</button>
-        <button>Delete</button>
+        <button onClick={() => {handleDelete(id); navigate('/'); }}>Delete</button>
       </div>
     </div>
   )
 }
+
+
