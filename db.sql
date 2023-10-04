@@ -39,7 +39,7 @@ CREATE INDEX idx_posts_title ON posts (title);
 \d posts
 
 -- Insert rows into table
-INSERT INTO posts (title, content, created_at, updated_at)
+INSERT INTO posts (title, content, created_at, updated_at, img_url)
 VALUES (
     'Lorem Ipsum Post 1',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -48,7 +48,7 @@ VALUES (
     'https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg'
 );
 
-INSERT INTO posts (title, content, created_at, updated_at)
+INSERT INTO posts (title, content, created_at, updated_at, img_url)
 VALUES (
     'Lorem Ipsum Post 2',
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -57,7 +57,7 @@ VALUES (
     'https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg'
 );
 
-INSERT INTO posts (title, content, created_at, updated_at)
+INSERT INTO posts (title, content, created_at, updated_at, img_url)
 VALUES (
     'Lorem Ipsum Post 3',
     'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
