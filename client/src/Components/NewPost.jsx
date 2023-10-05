@@ -88,7 +88,7 @@ export default function NewPost() {
 
       <button type='submit'>Add</button>
       
-      <p style={message ? { display: 'block' } : { display: 'none' }}>New contact has been added successfully!</p>
+      <p style={message ? { display: 'block' } : { display: 'none' }}>New post has been added successfully!</p>
 
     </form>
   )

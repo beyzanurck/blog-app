@@ -23,7 +23,6 @@ export default function ShowAPost() {
             const thePost = await response.json()
 
             setPost(thePost)
-            console.log(thePost)
 
         } catch (error) {
             console.log(error.message);
