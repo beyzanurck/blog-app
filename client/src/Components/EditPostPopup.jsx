@@ -101,8 +101,6 @@ export default function EditPostPopup({show , onClose, post, onUpdate}) {
             onChange={handleChange}
             />
 
-            <button type='submit'>Add</button>
-
         </form>
                 
         </Modal.Body>

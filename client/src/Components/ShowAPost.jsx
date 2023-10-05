@@ -47,7 +47,7 @@ export default function ShowAPost() {
     }
 
   return (
-    <div>
+    <div className='post-items'>
       <Img source = {post.img_url}/>
       <Title title = {post.title}/>
       <Content content = {post.content}/>
