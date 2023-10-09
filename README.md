@@ -2,20 +2,21 @@
 
 ### Technologies: 
 
-| Backend 	| Frontend 	| Database   	|
-|---------	|----------	|------------	|
-| Node    	| Vite     	| PostgreSQL 	|
-| Express 	| React    	| SQL        	|
-| Postman 	|     	    |         	    |
+| Backend 	| Frontend 	| Database   	| Testing   	|
+|---------	|----------	|------------	|-----------	|
+| Node    	| Vite     	| PostgreSQL 	| RTL       	|
+| Express 	| React    	| SQL        	| Vitest    	|
+| Postman 	|     	    |         	    |       	    |
+
 
 ### Dependencies: 
 
-| Backend      	| Frontend        	| Database 	|
-|--------------	|-----------------	|----------	|
-| cors         	| react-bootstrap 	| pg       	|
-| dotenv       	| bootstrap       	|          	|
-| concurrently 	| eact-router-dom 	|          	|
-| nodemon      	|                 	|          	|
+| Backend      	| Frontend        	| Database 	| Testing                   	|
+|--------------	|-----------------	|----------	|---------------------------	|
+| cors         	| react-bootstrap 	| pg       	| @testing-library/react    	|
+| dotenv       	| bootstrap       	|          	| @testing-library/jest-dom 	|
+| concurrently 	| eact-router-dom 	|          	| vitest-dom                	|
+| nodemon      	|                 	|          	|                           	|
  
 ### Instructions: 
 
