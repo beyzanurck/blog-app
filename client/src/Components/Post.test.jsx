@@ -11,8 +11,8 @@ test('renders blog post', () => {
 
   render(<Post posts={samplePost} />);
 
-  const titleElements = screen.getAllByText('Sample Title');
-  const contentElements = screen.getAllByText('This is a sample content for testing.');
+  const titleElements = screen.getAllByText(samplePost.title);
+  const contentElements = screen.getAllByText(samplePost.content);
 
   expect(titleElements.length).toBe(1);
   expect(contentElements.length).toBe(1);
