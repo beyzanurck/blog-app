@@ -16,12 +16,11 @@ export default function EditPostPopup({show , onClose, post, onUpdate}) {
 
   const editThePost= async (post) => {
     try {
-      const body = { ...post };
-
+      
       const response = await fetch(`http://localhost:1212/${post.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
+        body: JSON.stringify(post)
       })
 
       if (response.ok) {
