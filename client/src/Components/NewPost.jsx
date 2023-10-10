@@ -30,14 +30,10 @@ export default function NewPost() {
 
     try {
       
-      const {title, content, created_at, img_url} = newPost;
-
-        const body = {...newPost};
-
         const response = await fetch("http://localhost:1212", {
             method : "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body)
+            body: JSON.stringify(newPost)
         })
 
         if(response.ok) {setMessage(true)};
