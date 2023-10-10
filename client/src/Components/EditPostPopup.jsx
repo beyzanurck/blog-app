@@ -50,9 +50,9 @@ export default function EditPostPopup({show , onClose, post, onUpdate}) {
   }
   
   function enter(){
-    console.log( "Modal is Shown" ) 
-    post.updated_at = formatDate(post.created_at)
-    setEditedPost(post)
+    const update = { ...post };
+    update.updated_at = formatDate(post.created_at)
+    setEditedPost(update)
   }
 
 
