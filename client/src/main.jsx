@@ -8,12 +8,44 @@ import {
 
 import App from './App.jsx'
 import './index.css'
+import NewPost from './Components/NewPost.jsx';
+import About from './Components/About.jsx';
+import Layout from './Layout';
+import ShowAPost from './Components/ShowAPost.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
   },
+  {
+    path: "/new-post",
+    element: (
+      <Layout>
+        <NewPost />
+      </Layout>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Layout>
+        <About />
+      </Layout>
+    ),
+  }, 
+  {
+    path: "/post/:id",
+    element: (
+      <Layout>
+        <ShowAPost />
+      </Layout>
+    ),
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
