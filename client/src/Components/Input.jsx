@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function Input({ placeholder, type, name, value, onChange }) {
+export default function Input({ placeholder, type, name, value, onChange, required, minLength, maxLength, onInvalid }) {
   return (
     <input
         placeholder={placeholder}
@@ -8,6 +8,10 @@ export default function Input({ placeholder, type, name, value, onChange }) {
         name={name}
         value={value}
         onChange={onChange}
+        required={required} 
+        minLength={minLength} 
+        maxLength={maxLength} 
+        onInvalid={onInvalid} 
     />
-  )
+  );
 }

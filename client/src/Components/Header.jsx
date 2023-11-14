@@ -8,10 +8,10 @@ export default function Header() {
         <nav className='navbar'>
             <Link to="/" className='home'> Beyza's Blog </Link>
             <ul>
-                <li>
+                <li data-testid="newPostTest">
                 <Link to='/new-post'> New Post </Link>
                 </li>
-                <li>
+                <li data-testid="aboutTest">
                 <Link to='/about'> About </Link>
                 </li>
             </ul>
