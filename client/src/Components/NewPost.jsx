@@ -16,6 +16,7 @@ export default function NewPost() {
 
   function handleChange(event){
     const {value, name} = event.target
+    event.target.setCustomValidity('');
 
     let formattedValue = value;
 
@@ -48,6 +49,11 @@ export default function NewPost() {
     addNewPost(newPost);
   }
 
+  const handleInvalid = (event) => {
+    event.target.setCustomValidity('This field is necessary.');
+  };
+
+ 
   return (
     <form className='new-post' onSubmit={handleSubmit}>
 
@@ -57,6 +63,10 @@ export default function NewPost() {
         name='title'
         value={newPost.title}
         onChange={handleChange}
+        required
+        minLength={5} 
+        maxLength={100} 
+        onInvalid={handleInvalid}
       />
 
       <Input 
@@ -65,6 +75,8 @@ export default function NewPost() {
         name='content'
         value={newPost.content}
         onChange={handleChange}
+        required
+        minLength={10}
       />
 
       <Input 
@@ -73,6 +85,7 @@ export default function NewPost() {
         name='created_at'
         value={newPost.created_at}
         onChange={handleChange}
+        required
       />
 
       <Textarea 
@@ -80,6 +93,8 @@ export default function NewPost() {
         name="img_url" 
         value={newPost.img_url}
         onChange={handleChange}
+        required
+        pattern="https?://.+" 
       />
 
       <button type='submit'>Add</button>
